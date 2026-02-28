@@ -1,3 +1,5 @@
+passons à la section suivante. voici la logique actuelle 
+
 import { ShieldCheck, FileText, CheckCircle, Calendar, Users, Target } from 'lucide-react';
 
 export default function AboutAndExpertise() {
