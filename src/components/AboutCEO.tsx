@@ -48,7 +48,8 @@ export default function AboutCEO() {
             
             <p className="text-[17px] md:text-[19px] text-white/70 leading-relaxed font-medium">
               Entrepreneur et Agent immobilier basé à Cocody, Abidjan. Depuis 2015, j’accompagne des centaines de particuliers et entreprises à sécuriser leur patrimoine grâce à l’achat de terrains et villas dans des zones stratégiques de la Côte d’Ivoire.
-              Après avoir commencé dans le commerce et l’élevage, j’ai développé des projets dans l’immobilier, l’agro-industrie et les services du quotidien. Aujourd’hui, je mets mon expérience au service de votre investissement, avec professionnalisme et transparence et rigueur.
+
+Après avoir commencé dans le commerce et l’élevage, j’ai développé des projets dans l’immobilier, l’agro-industrie et les services du quotidien. Aujourd’hui, je mets mon expérience au service de votre investissement, avec professionnalisme et transparence et rigueur.
             </p>
 
             <div className="grid grid-cols-2 gap-6 pt-4">
@@ -100,10 +101,16 @@ export default function AboutCEO() {
                     </div>
                     <span className="text-[10px] text-white/40 font-black uppercase">Rotaract Abidjan</span>
                 </div>
+                
+                {/* BLOC SANGCOOLHEUR MODIFIÉ ICI */}
                 <div className="flex flex-col items-center">
-                    <div className="h-16 w-16 rounded-full bg-white/5 border border-white/10 flex items-center justify-center overflow-hidden p-2 mb-2">
-                        {/* Modification ici : remplacement du texte par l'image org1.jpeg */}
-                        <img src="org1.jpeg" alt="SANGCOOLHEUR" className="w-full h-full object-contain" />
+                    {/* p-0 pour que l'image prenne tout l'espace du cercle, overflow-hidden pour arrondir */}
+                    <div className="h-16 w-16 rounded-full bg-white/5 border border-white/10 flex items-center justify-center p-0 mb-2 overflow-hidden">
+                        <img 
+                          src="org1.jpeg" 
+                          alt="SANGCOOLHEUR" 
+                          className="w-full h-full object-cover" // object-cover pour un rognage circulaire parfait sans déformer
+                        />
                     </div>
                     <span className="text-[10px] text-white/40 font-black uppercase">SANGCOOLHEUR</span>
                 </div>
