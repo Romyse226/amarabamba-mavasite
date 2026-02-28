@@ -23,21 +23,20 @@ export default function AboutCEO() {
         {/* --- HEADER SECTION --- */}
         <div className="flex flex-col md:flex-row gap-16 items-center mb-24">
           <div className="w-full md:w-1/2 relative group">
-            {/* Cadre de luxe style Galerie */}
-            <div className="absolute -inset-4 border border-white/10 rounded-[3rem] -rotate-3 group-hover:rotate-0 transition-transform duration-700" />
-            <div className="relative overflow-hidden rounded-[2.5rem] shadow-2xl aspect-[4/5] bg-neutral-900 border border-white/20">
+            {/* Cadre blanc plus épais - S'adapte au contenu */}
+            <div className="relative overflow-hidden rounded-[2.5rem] shadow-2xl bg-neutral-900 border-4 border-white">
               <img 
-                src="/imageaccueil.jpg" 
+                src="/amara.jpeg" 
                 alt="Amara Bamba" 
-                className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" 
+                className="w-full h-auto object-contain transition-transform duration-1000 group-hover:scale-105" 
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-60" />
             </div>
           </div>
 
           <div className="w-full md:w-1/2 space-y-8">
             <div className="inline-flex items-center gap-3 px-4 py-1.5 bg-white/5 border border-white/10 rounded-full">
-              <span className="h-1.5 w-1.5 rounded-full bg-[#D4AF37] animate-pulse" />
+              <span className="h-1.5 w-1.5 rounded-full bg-red-600 animate-pulse" />
               <span className="text-white/60 font-black uppercase text-[10px] tracking-[0.3em]">Visionnaire & Leader</span>
             </div>
             
@@ -48,17 +47,17 @@ export default function AboutCEO() {
             
             <p className="text-[17px] md:text-[19px] text-white/70 leading-relaxed font-medium">
               Entrepreneur et Agent immobilier basé à Cocody, Abidjan. Depuis 2015, j’accompagne des centaines de particuliers et entreprises à sécuriser leur patrimoine grâce à l’achat de terrains et villas dans des zones stratégiques de la Côte d’Ivoire.
-
-Après avoir commencé dans le commerce et l’élevage, j’ai développé des projets dans l’immobilier, l’agro-industrie et les services du quotidien. Aujourd’hui, je mets mon expérience au service de votre investissement, avec professionnalisme et transparence et rigueur.
+              <br/><br/>
+              Après avoir commencé dans le commerce et l’élevage, j’ai développé des projets dans l’immobilier, l’agro-industrie et les services du quotidien. Aujourd’hui, je mets mon expérience au service de votre investissement, avec professionnalisme et transparence et rigueur.
             </p>
 
             <div className="grid grid-cols-2 gap-6 pt-4">
                 <div className="border-l border-white/10 pl-4">
-                    <span className="block text-white font-black text-2xl tracking-tighter">CEO</span>
+                    <span className="block text-red-600 font-black text-2xl tracking-tighter">CEO</span>
                     <span className="text-white/40 text-[11px] font-bold uppercase tracking-widest">Djassô FARM</span>
                 </div>
                 <div className="border-l border-white/10 pl-4">
-                    <span className="block text-white font-black text-2xl tracking-tighter">10 ANS</span>
+                    <span className="block text-red-600 font-black text-2xl tracking-tighter">10 ANS</span>
                     <span className="text-white/40 text-[11px] font-bold uppercase tracking-widest">D'expérience</span>
                 </div>
             </div>
@@ -96,21 +95,14 @@ Après avoir commencé dans le commerce et l’élevage, j’ai développé des 
             
             <div className="flex flex-wrap justify-center gap-6">
                 <div className="flex flex-col items-center">
-                    <div className="h-16 w-16 rounded-full bg-white/5 border border-white/10 flex items-center justify-center p-3 mb-2">
-                        <img src="org2.jpeg" alt="Rotaract" className="invert brightness-200" />
+                    <div className="h-20 w-20 rounded-full bg-white/5 border-2 border-white flex items-center justify-center overflow-hidden mb-2">
+                        <img src="org2.jpeg" alt="Rotaract Abidjan" className="w-full h-full object-cover" />
                     </div>
                     <span className="text-[10px] text-white/40 font-black uppercase">Rotaract Abidjan</span>
                 </div>
-                
-                {/* BLOC SANGCOOLHEUR MODIFIÉ ICI */}
                 <div className="flex flex-col items-center">
-                    {/* p-0 pour que l'image prenne tout l'espace du cercle, overflow-hidden pour arrondir */}
-                    <div className="h-16 w-16 rounded-full bg-white/5 border border-white/10 flex items-center justify-center p-0 mb-2 overflow-hidden">
-                        <img 
-                          src="org1.jpeg" 
-                          alt="SANGCOOLHEUR" 
-                          className="w-full h-full object-cover" // object-cover pour un rognage circulaire parfait sans déformer
-                        />
+                    <div className="h-20 w-20 rounded-full bg-white/5 border-2 border-white flex items-center justify-center overflow-hidden mb-2">
+                        <img src="org1.jpeg" alt="SANGCOOLHEUR" className="w-full h-full object-cover" />
                     </div>
                     <span className="text-[10px] text-white/40 font-black uppercase">SANGCOOLHEUR</span>
                 </div>
