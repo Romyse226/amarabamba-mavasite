@@ -20,7 +20,7 @@ export default function ContactSection({ onBookingClick }: { onBookingClick: () 
   const stats = [
     { value: 100, label: "Satisfaction", sub: "+100 clients heureux", color: "#D4AF37" },
     { value: 100, label: "Disponibilité", sub: "Accompagnement H24", color: "#000000" },
-    { value: 10, label: "Expertise", sub: "Ans d'expérience", color: "#D4AF37" }
+    { value: 100, label: "Fiabilité", sub: "TOTALE", color: "#D4AF37" },
   ];
 
   return (
@@ -74,7 +74,7 @@ export default function ContactSection({ onBookingClick }: { onBookingClick: () 
           <div className="relative z-10 flex flex-col lg:flex-row items-center gap-16">
             <div className="lg:w-1/2 space-y-8 text-center lg:text-left">
               <h3 className="text-white text-[35px] md:text-[55px] font-black uppercase leading-[0.9] tracking-tighter">
-                PRÊT À <br/><span style={{ color: gold }}>INVESTIR ?</span>
+                PRÊT À <br/><span style={{ color: gold }}>ÊTRE PROPRIÉTAIRE ?</span>
               </h3>
               <p className="text-slate-400 font-medium text-[17px] leading-relaxed">
                 Amara Bamba vous conseille personnellement pour sécuriser votre avenir foncier en Côte d'Ivoire.

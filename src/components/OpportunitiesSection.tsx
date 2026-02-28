@@ -46,7 +46,7 @@ export default function OpportunitiesSection() {
         {/* EN-TÊTE */}
         <div className="text-center mb-16">
           <div className="inline-block px-4 py-1 bg-slate-50 border border-slate-100 rounded-full mb-4">
-            <span className="text-slate-400 font-black text-[10px] uppercase tracking-[0.3em]">Catalogue Privé</span>
+            <span className="text-slate-400 font-black text-[10px] uppercase tracking-[0.3em]">Catalogue</span>
           </div>
           <h2 className="text-black font-[900] text-[32px] md:text-[50px] uppercase leading-none tracking-tighter">
             NOS BIENS <span style={{ color: gold }}>DISPONIBLES</span>
