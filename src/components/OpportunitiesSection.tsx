@@ -11,7 +11,8 @@ export default function OpportunitiesSection() {
       location: "Divo – Briboré", 
       price: "800 000 F",
       desc: "Zone stratégique en pleine expansion.",
-      image: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&q=80",
+      // MISE À JOUR IMAGE 1
+      image: "/terrain.jpeg", 
       msg: "Bonjour M. Bamba, je suis intéressé par le lot de 500m2 à Divo."
     },
     { 
@@ -19,7 +20,8 @@ export default function OpportunitiesSection() {
       location: "Divo – Briboré", 
       price: "1 500 000 F",
       desc: "Idéal pour projet agricole ou immobilier.",
-      image: "https://images.unsplash.com/photo-1593510987185-1ec2256148a3?auto=format&fit=crop&q=80",
+      // MISE À JOUR IMAGE 2
+      image: "/terrain2.jpeg",
       msg: "Bonjour M. Bamba, je souhaite avoir des infos sur le lot de 1000m2 à Divo."
     },
     { 
@@ -27,7 +29,8 @@ export default function OpportunitiesSection() {
       location: "Angré – 10e Tranche", 
       price: "550 000 F / mois",
       desc: "Paiement flexible sur 5 ans.",
-      image: "https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&q=80",
+      // MISE À JOUR IMAGE 3
+      image: "/villa.jpg",
       msg: "Bonjour M. Bamba, je souhaite des informations sur la villa à Angré."
     }
   ];
@@ -56,7 +59,7 @@ export default function OpportunitiesSection() {
             <div key={i} className="group relative bg-black rounded-[2.5rem] overflow-hidden shadow-2xl transition-transform hover:-translate-y-2">
               
               {/* IMAGE (Hauteur optimisée pour mobile) */}
-              <div className="relative h-[240px] md:h-[280px] overflow-hidden">
+              <div className="relative h-[240px] md:h-[280px] overflow-hidden bg-neutral-900">
                 <img 
                   src={item.image} 
                   alt={item.title} 

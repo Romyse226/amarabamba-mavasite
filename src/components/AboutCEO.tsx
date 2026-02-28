@@ -48,8 +48,7 @@ export default function AboutCEO() {
             
             <p className="text-[17px] md:text-[19px] text-white/70 leading-relaxed font-medium">
               Entrepreneur et Agent immobilier basé à Cocody, Abidjan. Depuis 2015, j’accompagne des centaines de particuliers et entreprises à sécuriser leur patrimoine grâce à l’achat de terrains et villas dans des zones stratégiques de la Côte d’Ivoire.
-
-Après avoir commencé dans le commerce et l’élevage, j’ai développé des projets dans l’immobilier, l’agro-industrie et les services du quotidien. Aujourd’hui, je mets mon expérience au service de votre investissement, avec professionnalisme et transparence et rigueur.
+              Après avoir commencé dans le commerce et l’élevage, j’ai développé des projets dans l’immobilier, l’agro-industrie et les services du quotidien. Aujourd’hui, je mets mon expérience au service de votre investissement, avec professionnalisme et transparence et rigueur.
             </p>
 
             <div className="grid grid-cols-2 gap-6 pt-4">
@@ -97,13 +96,14 @@ Après avoir commencé dans le commerce et l’élevage, j’ai développé des 
             <div className="flex flex-wrap justify-center gap-6">
                 <div className="flex flex-col items-center">
                     <div className="h-16 w-16 rounded-full bg-white/5 border border-white/10 flex items-center justify-center p-3 mb-2">
-                        <img src="https://rotaract.org/wp-content/uploads/2021/03/Rotaract-Logo.png" alt="Rotaract" className="invert brightness-200" />
+                        <img src="org2.jpeg" alt="Rotaract" className="invert brightness-200" />
                     </div>
                     <span className="text-[10px] text-white/40 font-black uppercase">Rotaract Abidjan</span>
                 </div>
                 <div className="flex flex-col items-center">
-                    <div className="h-16 w-16 rounded-full bg-white/5 border border-white/10 flex items-center justify-center p-3 mb-2 font-black text-[#D4AF37]">
-                        SCH
+                    <div className="h-16 w-16 rounded-full bg-white/5 border border-white/10 flex items-center justify-center overflow-hidden p-2 mb-2">
+                        {/* Modification ici : remplacement du texte par l'image org1.jpeg */}
+                        <img src="org1.jpeg" alt="SANGCOOLHEUR" className="w-full h-full object-contain" />
                     </div>
                     <span className="text-[10px] text-white/40 font-black uppercase">SANGCOOLHEUR</span>
                 </div>
