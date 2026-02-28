@@ -1,31 +1,32 @@
 import { useState } from 'react';
-// On ne garde que les imports vers les fichiers que tu as réellement créés
-import Hero from './components/Hero';
-import ServicesSection from './components/ServicesSection'; 
-import AboutAndExpertise from './components/AboutAndExpertise';
-import FinalSection from './components/FinalSection';
+// On s'assure que les noms de composants reflètent l'activité d'Amara Bamba
+import Hero from './components/Hero'; 
+import OpportunitiesSection from './components/OpportunitiesSection';
+import AboutCEO from './components/AboutCEO';
+import ContactSection from './components/ContactSection';
 import BookingModal from './components/BookingModal';
 
 function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
+  // Fonctions de contrôle de la Modal d'investissement
   const openModal = () => setIsModalOpen(true);
   const closeModal = () => setIsModalOpen(false);
 
   return (
     <div className="min-h-screen bg-white">
       <main>
-        {/* On affiche uniquement les sections dont les fichiers existent */}
+        {/* HERO : Présentation d'Amara Bamba et accroche patrimoine */}
         <Hero onBookingClick={openModal} />
         
-        <ServicesSection onBookingClick={openModal} />
+        {/* À PROPOS : Parcours entrepreneur, CEO de Djassô FARM et engagement social */}
+        <AboutCEO />
         
-        <AboutAndExpertise />
-        
-        <FinalSection onBookingClick={openModal} />
+        {/* CONTACT : Section finale avec coordonnées et valeurs de confiance */}
+        <ContactSection onBookingClick={openModal} />
       </main>
 
-      {/* La Modal qui s'ouvre quand on clique sur les boutons */}
+      {/* MODAL : Adaptée avec les champs "Projet" et le numéro 0779761715 */}
       <BookingModal isOpen={isModalOpen} onClose={closeModal} />
     </div>
   );
