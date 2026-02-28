@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useRef } from 'react';
-import { MessageCircle, Phone, MapPin, Send, Instagram, Facebook } from 'lucide-react';
+// Ajout de Mail dans les imports ci-dessous
+import { MessageCircle, Phone, MapPin, Send, Instagram, Facebook, Mail } from 'lucide-react';
 
 export default function ContactSection({ onBookingClick }: { onBookingClick: () => void }) {
   const gold = "#D4AF37";
@@ -66,7 +67,7 @@ export default function ContactSection({ onBookingClick }: { onBookingClick: () 
           ))}
         </div>
 
-{/* --- BLOC CONTACT NOIR LUXE --- */}
+        {/* --- BLOC CONTACT NOIR LUXE --- */}
         <div className="bg-slate-900 rounded-[3.5rem] p-8 md:p-20 relative overflow-hidden shadow-3xl">
           {/* Effet de lumière Or en fond */}
           <div className="absolute -top-24 -right-24 w-96 h-96 bg-[#D4AF37] opacity-10 blur-[120px]" />
