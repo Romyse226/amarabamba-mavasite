@@ -21,7 +21,7 @@ function App() {
         <AboutCEO />
 
         {/* 3. AJOUT ICI : Les terrains et villas (C'était la pièce manquante) */}
-        <OpportunitiesSection onBookingClick={openModal} />
+        <OpportunitiesSection />
         
         {/* 4. Le contact et les valeurs */}
         <ContactSection onBookingClick={openModal} />
