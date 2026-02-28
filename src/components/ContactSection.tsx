@@ -66,7 +66,7 @@ export default function ContactSection({ onBookingClick }: { onBookingClick: () 
           ))}
         </div>
 
-        {/* --- BLOC CONTACT NOIR LUXE --- */}
+{/* --- BLOC CONTACT NOIR LUXE --- */}
         <div className="bg-slate-900 rounded-[3.5rem] p-8 md:p-20 relative overflow-hidden shadow-3xl">
           {/* Effet de lumière Or en fond */}
           <div className="absolute -top-24 -right-24 w-96 h-96 bg-[#D4AF37] opacity-10 blur-[120px]" />
@@ -86,6 +86,12 @@ export default function ContactSection({ onBookingClick }: { onBookingClick: () 
                     <Phone size={22}/>
                   </div>
                   <span className="text-white font-black text-xl tracking-tight">+225 07 79 76 17 15</span>
+                </div>
+                <div className="flex items-center gap-5 justify-center lg:justify-start">
+                  <div className="w-12 h-12 bg-white/5 border border-white/10 rounded-2xl flex items-center justify-center text-[#D4AF37]">
+                    <Mail size={22}/>
+                  </div>
+                  <span className="text-white font-black text-lg tracking-tight lowercase">cedricbamba47@yahoo.com</span>
                 </div>
                 <div className="flex items-center gap-5 justify-center lg:justify-start">
                   <div className="w-12 h-12 bg-white/5 border border-white/10 rounded-2xl flex items-center justify-center text-[#D4AF37]">
