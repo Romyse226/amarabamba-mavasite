@@ -47,7 +47,9 @@ export default function AboutCEO() {
             </h2>
             
             <p className="text-[17px] md:text-[19px] text-white/70 leading-relaxed font-medium">
-              Entrepreneur et investisseur basé à Cocody, j’accompagne depuis 2015 des centaines de familles à bâtir un patrimoine sécurisé. Mon parcours, du commerce à l’agro-industrie, forge ma rigueur et mon professionnalisme.
+              Entrepreneur et Agent immobilier basé à Cocody, Abidjan. Depuis 2015, j’accompagne des centaines de particuliers et entreprises à sécuriser leur patrimoine grâce à l’achat de terrains et villas dans des zones stratégiques de la Côte d’Ivoire.
+
+Après avoir commencé dans le commerce et l’élevage, j’ai développé des projets dans l’immobilier, l’agro-industrie et les services du quotidien. Aujourd’hui, je mets mon expérience au service de votre investissement, avec professionnalisme et transparence et rigueur.
             </p>
 
             <div className="grid grid-cols-2 gap-6 pt-4">

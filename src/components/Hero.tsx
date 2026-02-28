@@ -52,12 +52,17 @@ export default function Hero({ onBookingClick }: { onBookingClick: () => void })
             />
 
             {/* OVERLAY DE TEXTE AVEC PROTECTION DE LISIBILITÉ */}
-            <div className="absolute inset-0 z-20 bg-gradient-to-t from-black/90 via-black/20 to-transparent md:bg-gradient-to-r md:from-black/80 md:via-black/40 md:to-transparent flex flex-col justify-end md:justify-center p-8 md:p-16">
-                <div className="max-w-2xl">
-                    <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 px-4 py-2 rounded-full mb-6">
-                        <span className="h-2 w-2 bg-red-500 rounded-full animate-pulse"></span>
-                        <span className="text-white text-[10px] font-black uppercase tracking-[0.2em]">Expertise & Transparence</span>
-                    </div>
+           <div className="absolute inset-0 z-20 bg-gradient-to-t from-black/90 via-black/20 to-transparent md:bg-gradient-to-r md:from-black/80 md:via-black/40 md:to-transparent flex flex-col justify-end md:justify-center p-8 md:p-16">
+    {/* items-start force l'alignement à gauche */}
+    <div className="max-w-2xl flex flex-col items-start"> 
+        
+        {/* Badge Expertise & Transparence */}
+        <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 px-4 py-2 rounded-full mb-6">
+            <span className="h-2 w-2 bg-red-500 rounded-full animate-pulse"></span>
+            <span className="text-white text-[10px] font-black uppercase tracking-[0.2em]">
+                Expertise & Transparence
+            </span>
+        </div>
 
                     <h1 className="text-white text-[38px] md:text-[75px] font-[900] leading-[0.95] uppercase tracking-tighter mb-6"
                         style={{ textShadow: '2px 4px 10px rgba(0,0,0,0.5)' }}>
@@ -86,7 +91,7 @@ export default function Hero({ onBookingClick }: { onBookingClick: () => void })
             {[
               { label: "EXPERTISE", val: "Depuis 2015" },
               { label: "SÉCURITÉ", val: "Vérification ACD" },
-              { label: "ZONES", val: "Abidjan & Divo" },
+              { label: "ZONES", val: "Abidjan & Intérieur" },
               { label: "ENGAGEMENT", val: "Impact Social" }
             ].map((stat, i) => (
               <div key={i} className="border-l-2 border-slate-100 pl-4">

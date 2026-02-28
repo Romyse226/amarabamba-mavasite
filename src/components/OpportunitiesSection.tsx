@@ -1,108 +1,151 @@
 import React, { useState, useEffect } from 'react';
-import { Plane, Hotel, ShieldCheck, Map, ArrowRight } from 'lucide-react';
+import { MapPin, Home, Trees, ArrowUpRight, Zap } from 'lucide-react';
 
-export default function ServicesSection() {
+export default function OpportunitiesSection({ onBookingClick }: { onBookingClick: () => void }) {
   const [activeTab, setActiveTab] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
 
-  const services = [
-    { id: 0, title: "Billet d'avion", icon: <Plane size={24} />, headline: "Envolez-vous avec facilité", desc: "Meilleurs tarifs pour vos vols internationaux.", image: "/image1.jpg" },
-    { id: 1, title: "Hôtel & Séjour", icon: <Hotel size={24} />, headline: "Dormez en toute serrénité", desc: "Logements vérifiés pour votre confort.", image: "/hotel.jpg" },
-    { id: 2, title: "Visa & Assurance", icon: <ShieldCheck size={24} />, headline: "Assistance démarches", desc: "Expertise totale sur vos dossiers de visa.", image: "/visa.jpg" },
-    { id: 3, title: "Tourisme", icon: <Map size={24} />, headline: "Découvrez l'inattendu", desc: "Circuits immersifs et authentiques.", image: "/imageanimation1.jpg" }
-  ];
+  const gold = "#D4AF37";
 
-  // Fonction pour envoyer vers WhatsApp avec message dédié
-  const handleWhatsApp = () => {
-    const phoneNumber = "2250799145540";
-    const serviceName = services[activeTab].title;
-    const message = `Bonjour Visa Voyage Succès, je souhaiterais avoir des informations concernant votre service : *${serviceName}*.`;
-    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
-    window.open(whatsappUrl, '_blank');
-  };
+  const opportunities = [
+    { 
+      id: 0, 
+      title: "Terrains 500m²", 
+      location: "Divo – Briboré",
+      icon: <Trees size={22} />, 
+      price: "800 000 F",
+      desc: "Idéal pour une résidence secondaire ou un investissement locatif dans une zone en pleine expansion.",
+      image: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&q=80" // Image de terrain propre
+    },
+    { 
+      id: 1, 
+      title: "Terrains 1000m²", 
+      location: "Divo – Briboré",
+      icon: <MapPin size={22} />, 
+      price: "1 500 000 F",
+      desc: "Espace généreux pour projets d'envergure. Sécurisé, accessible et à fort potentiel de plus-value.",
+      image: "https://images.unsplash.com/photo-1593510987185-1ec2256148a3?auto=format&fit=crop&q=80"
+    },
+    { 
+      id: 2, 
+      title: "Villas 4 Pièces", 
+      location: "Angré – 10e Tranche",
+      icon: <Home size={22} />, 
+      price: "550 000 F / mois",
+      desc: "Le luxe accessible. Devenez propriétaire en 5 ans avec notre plan de paiement flexible.",
+      image: "https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&q=80" // Image de villa moderne
+    }
+  ];
 
   useEffect(() => {
     if (!isPaused) {
       const interval = setInterval(() => {
-        setActiveTab((prev) => (prev + 1) % services.length);
-      }, 4000);
+        setActiveTab((prev) => (prev + 1) % opportunities.length);
+      }, 5000);
       return () => clearInterval(interval);
     }
-  }, [isPaused, services.length]);
+  }, [isPaused, opportunities.length]);
 
   return (
-    <section className="bg-gray-50 py-12 md:py-16">
-      <div className="max-w-6xl mx-auto px-6">
+    <section id="Opportunités" className="bg-white py-20">
+      <div className="max-w-7xl mx-auto px-6">
         
-        <div className="text-center mb-8">
-          <h2 className="text-[#424346] font-black text-[28px] md:text-[40px] uppercase">
-            NOS SERVICES <span className="text-[#FB6F42]">SUR-MESURE</span>
-          </h2>
+        {/* EN-TÊTE DE SECTION */}
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+          <div className="max-w-2xl">
+            <div className="flex items-center gap-2 mb-4">
+               <span className="h-[2px] w-10 bg-black"></span>
+               <span className="text-[11px] font-black uppercase tracking-[0.3em] text-gray-400">Catalogue Immobilier</span>
+            </div>
+            <h2 className="text-black font-[900] text-[35px] md:text-[55px] uppercase leading-[0.9] tracking-tighter">
+              Nos Biens <br/> <span style={{ color: gold }}>Disponibles</span>
+            </h2>
+          </div>
+          <p className="text-gray-500 font-medium max-w-sm border-l-2 border-gray-100 pl-6">
+            Des opportunités sélectionnées pour leur sécurité juridique et leur rendement futur.
+          </p>
         </div>
 
-        {/* ONGLETS */}
-        <div className="flex flex-wrap justify-center gap-2 mb-8">
-          {services.map((s, i) => (
+        {/* NAVIGATION ONGLET STYLE "DASHBOARD LUXE" */}
+        <div className="flex flex-wrap gap-3 mb-10">
+          {opportunities.map((opt, i) => (
             <button 
               key={i} 
               onClick={() => { setActiveTab(i); setIsPaused(true); }} 
-              className={`flex items-center gap-2 px-5 py-2.5 rounded-full font-black uppercase text-[10px] border-2 transition-all ${
+              className={`flex items-center gap-3 px-8 py-4 rounded-2xl font-black uppercase text-[11px] tracking-widest transition-all duration-300 ${
                 activeTab === i 
-                ? "bg-[#FB6F42] border-[#FB6F42] text-white shadow-md" 
-                : "bg-white border-gray-100 text-[#424346]"
+                ? "bg-black text-white shadow-2xl scale-105" 
+                : "bg-gray-50 text-gray-400 hover:bg-gray-100"
               }`}
             >
-              {s.icon}
-              {s.title}
+              <span className={activeTab === i ? "text-[#D4AF37]" : "text-gray-300"}>{opt.icon}</span>
+              {opt.title}
             </button>
           ))}
         </div>
 
-        {/* CARTE COMPRESSÉE ET UNIFORME */}
-        <div className="bg-white rounded-[2rem] overflow-hidden shadow-xl border border-gray-100 flex flex-col lg:flex-row h-auto lg:h-[450px]">
+        {/* AFFICHAGE DU BIEN (MAIN CARD) */}
+        <div className="group relative bg-black rounded-[3rem] overflow-hidden shadow-[0_50px_100px_-20px_rgba(0,0,0,0.3)] flex flex-col lg:flex-row min-h-[550px]">
           
-          {/* IMAGE : Hauteur fixe et forcée sur PC */}
-          <div className="lg:w-1/2 w-full h-[250px] lg:h-full relative">
+          {/* IMAGE AVEC EFFET ZOOM */}
+          <div className="lg:w-3/5 w-full h-[300px] lg:h-auto relative overflow-hidden">
             <img 
-              src={services[activeTab].image} 
-              alt={services[activeTab].title}
-              className="w-full h-full object-cover" 
+              src={opportunities[activeTab].image} 
+              alt={opportunities[activeTab].title}
+              className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" 
             />
+            <div className="absolute top-8 left-8 bg-white/10 backdrop-blur-md border border-white/20 px-4 py-2 rounded-xl">
+               <div className="flex items-center gap-2">
+                  <MapPin size={14} className="text-[#D4AF37]" />
+                  <span className="text-white text-[10px] font-black uppercase tracking-widest">{opportunities[activeTab].location}</span>
+               </div>
+            </div>
           </div>
 
-          {/* TEXTE COMPRESSÉ */}
-          <div className="lg:w-1/2 p-6 md:p-10 flex flex-col justify-center">
-            {/* Barre de progression discrète */}
+          {/* CONTENU TEXTUEL */}
+          <div className="lg:w-2/5 p-8 md:p-14 flex flex-col justify-center bg-gradient-to-br from-neutral-900 to-black relative">
+            
+            {/* Barre de progression dorée */}
             {!isPaused && (
-              <div className="w-16 h-1 bg-gray-100 mb-4 rounded-full overflow-hidden">
-                <div key={activeTab} className="h-full bg-[#FB6F42] animate-progress" />
+              <div className="absolute top-0 left-0 w-full h-1 bg-white/5">
+                <div key={activeTab} className="h-full bg-[#D4AF37] animate-progress-fast" />
               </div>
             )}
 
-            <h4 className="text-[#424346] font-black text-[24px] md:text-[32px] leading-tight uppercase mb-3">
-              {services[activeTab].headline}
-            </h4>
-            
-            <p className="text-gray-500 font-medium text-[15px] md:text-[16px] leading-snug mb-6">
-              {services[activeTab].desc}
-            </p>
+            <div className="mb-8">
+                <span className="text-[#D4AF37] font-black text-[12px] uppercase tracking-[0.4em] block mb-4">Investissement Recommandé</span>
+                <h3 className="text-white font-black text-[35px] md:text-[45px] leading-none uppercase tracking-tighter mb-4">
+                  {opportunities[activeTab].title}
+                </h3>
+                <div className="inline-block bg-[#D4AF37] text-black px-4 py-1 rounded-lg font-black text-[20px] mb-6">
+                  {opportunities[activeTab].price}
+                </div>
+                <p className="text-white/60 font-medium text-[16px] leading-relaxed">
+                  {opportunities[activeTab].desc}
+                </p>
+            </div>
 
-            <div>
+            <div className="space-y-4">
               <button 
-                onClick={handleWhatsApp}
-                className="group flex items-center gap-3 bg-[#424346] text-white px-6 py-3.5 rounded-xl font-black uppercase text-[11px] hover:bg-[#FB6F42] transition-all"
+                onClick={onBookingClick}
+                className="w-full flex items-center justify-between bg-white text-black px-8 py-6 rounded-2xl font-black uppercase text-[12px] tracking-widest hover:bg-[#D4AF37] hover:text-black transition-all group/btn shadow-xl"
               >
-                Réserver ce service 
-                <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+                Je réserve ce lot
+                <ArrowUpRight size={20} className="group-hover/btn:translate-x-1 group-hover/btn:-translate-y-1 transition-transform" />
               </button>
+              
+              <div className="flex items-center justify-center gap-2 text-white/30 py-2">
+                 <Zap size={14} />
+                 <span className="text-[9px] font-black uppercase tracking-[0.2em]">Transaction Sécurisée par ACD</span>
+              </div>
             </div>
           </div>
         </div>
       </div>
 
       <style>{`
-        @keyframes progress { from { width: 0%; } to { width: 100%; } }
-        .animate-progress { animation: progress 4s linear forwards; }
+        @keyframes progress-fast { from { width: 0%; } to { width: 100%; } }
+        .animate-progress-fast { animation: progress-fast 5s linear forwards; }
       `}</style>
     </section>
   );
