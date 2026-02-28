@@ -6,7 +6,7 @@ export default function Hero({ onBookingClick }: { onBookingClick: () => void })
   const gold = "#D4AF37";
 
   return (
-    <section className="relative w-full bg-white overflow-hidden">
+    <section className="relative w-full bg-black overflow-hidden">
       {/* --- NAVIGATION --- */}
       <nav className="fixed top-0 w-full bg-white/90 backdrop-blur-xl z-[100] border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
@@ -18,7 +18,7 @@ export default function Hero({ onBookingClick }: { onBookingClick: () => void })
               <span className="font-black text-[18px] leading-none uppercase text-slate-900 tracking-tighter">
                 Amara <span style={{ color: gold }}>Bamba</span>
               </span>
-              <span className="text-[9px] font-bold text-gray-400 uppercase tracking-[0.3em]">Investisseur Immobilier</span>
+              <span className="text-[9px] font-bold text-black-400 uppercase tracking-[0.3em]">Investisseur Immobilier</span>
             </div>
           </div>
 
@@ -67,7 +67,7 @@ export default function Hero({ onBookingClick }: { onBookingClick: () => void })
 
                     <p className="text-white/90 text-[16px] md:text-[20px] max-w-lg font-medium leading-snug mb-10"
                        style={{ textShadow: '1px 2px 8px rgba(0,0,0,0.4)' }}>
-                        Sécurisez votre avenir avec des terrains et villas d'exception à Abidjan et Divo.
+                        Sécurisez votre avenir avec des terrains et villas d'exception à Abidjan et à l'intérieur du pays.
                     </p>
 
                     <button 
