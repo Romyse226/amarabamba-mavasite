@@ -24,7 +24,7 @@ function App() {
       }}>
         <div>
           <h1 style={{fontSize: '24px', fontWeight: 'bold', marginBottom: '10px'}}>MAINTENANCE EN COURS</h1>
-          <p style={{opacity: 0.7}}>Le site LCC voyage  sera bientôt de retour.</p>
+          <p style={{opacity: 0.7}}>.</p>
         </div>
       </div>
     );
